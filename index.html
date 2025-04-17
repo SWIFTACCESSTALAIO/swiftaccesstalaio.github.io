@@ -1,102 +1,113 @@
-
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SwiftAccess Talaio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="icon" type="image/png" href="icon.png">
   <style>
-    body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
-    header { background: #1a1a1a; color: #fff; text-align: center; }
-    nav a { color: #fff; margin: 0 1rem; text-decoration: none; font-weight: 600; }
-    header img { width: 100%; max-height: 300px; object-fit: cover; display: block; }
-    section { padding: 2rem; max-width: 1000px; margin: auto; }
-    h2 { color: #1a1a1a; }
-    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
-    .service-box { background: #fff; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    .service-box svg { width: 32px; height: 32px; margin-bottom: 0.5rem; color: #0066cc; }
-    footer { text-align: center; background: #1a1a1a; color: #fff; padding: 1rem; margin-top: 2rem; }
-    .btn { display: inline-block; padding: 0.75rem 1.5rem; background: #0066cc; color: #fff; border-radius: 5px; text-decoration: none; margin-top: 1rem; font-weight: bold; }
+    :root {
+      --bg-light: #f9f9f9;
+      --text-light: #1a1a1a;
+      --bg-dark: #1a1a1a;
+      --text-dark: #f9f9f9;
+      --accent: #00bfa6;
+      --font-main: 'Segoe UI', sans-serif;
+    }
+
+    [data-theme="light"] {
+      --bg: var(--bg-light);
+      --text: var(--text-light);
+    }
+
+    [data-theme="dark"] {
+      --bg: var(--bg-dark);
+      --text: var(--text-dark);
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-main);
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      background-color: var(--accent);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    h1, h2 {
+      color: var(--accent);
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    .theme-toggle {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      padding: 0.5rem 1rem;
+      border: none;
+      background: var(--accent);
+      color: white;
+      cursor: pointer;
+      border-radius: 8px;
+    }
   </style>
 </head>
-<body>
+<body data-theme="light">
+  <button class="theme-toggle" onclick="toggleTheme()">Alternar Tema</button>
   <header>
-    <img src="https://images.unsplash.com/photo-1581090700227-1e8a52f6fbd4?auto=format&fit=crop&w=1350&q=80" alt="Imagem de capa">
+    <img src="icon.png" alt="SwiftAccess Talaio" height="60">
     <h1>SwiftAccess Talaio</h1>
-    <p>Soluções digitais e financeiras para Angola e o mundo</p>
-    <nav>
-      <a href="#sobre">Sobre</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#planos">Planos</a>
-      <a href="#contato">Contato</a>
-    </nav>
+    <p>Tudo o que você precisa para entrar no mundo digital e internacional</p>
   </header>
+  <div class="container">
+    <p><strong>Quer abrir conta no Brasil ou em Portugal? Precisa de CPF, número virtual, cartão internacional ou ajuda com plataformas?</strong></p>
+    <p>A <strong>SwiftAccess Talaio</strong> resolve isso pra você — com agilidade, segurança e suporte completo!</p>
 
-  <section id="sobre">
-    <h2>Sobre Nós</h2>
-    <p>Somos especialistas em conectar clientes de Angola com soluções digitais e bancárias internacionais. Atendemos com agilidade, segurança e suporte personalizado. Serviços disponíveis online e presencialmente.</p>
-  </section>
-
-  <section id="servicos">
-    <h2>Serviços</h2>
-    <div class="services">
-      <div class="service-box">
-        <i data-lucide="file-text"></i>
-        <h3>Documentação</h3>
-        <p>CPF, RG, NIF, NISS, e suporte em imigração.</p>
-      </div>
-      <div class="service-box">
-        <i data-lucide="banknote"></i>
-        <h3>Contas Internacionais</h3>
-        <p>Abertura de contas no Brasil, Portugal, EUA e mais.</p>
-      </div>
-      <div class="service-box">
-        <i data-lucide="wallet"></i>
-        <h3>Carteiras Digitais</h3>
-        <p>Criação e ativação de contas Wise, Payoneer, e cartões.</p>
-      </div>
-      <div class="service-box">
-        <i data-lucide="phone"></i>
-        <h3>Números Virtuais</h3>
-        <p>Ativação de WhatsApp, Telegram e apps com números do Brasil, EUA, Portugal e mais.</p>
-      </div>
-      <div class="service-box">
-        <i data-lucide="graduation-cap"></i>
-        <h3>Mentorias</h3>
-        <p>Aulas e consultoria sobre finanças, criptomoedas e marketing.</p>
-      </div>
-      <div class="service-box">
-        <i data-lucide="dollar-sign"></i>
-        <h3>Venda de Divisas</h3>
-        <p>Compra e venda de Reais (R$) e USDT em Angola.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="planos">
-    <h2>Pacotes e Planos</h2>
+    <h2>Serviços Disponíveis</h2>
     <ul>
-      <li><strong>Start Digital:</strong> Número virtual + CPF + e-mail profissional</li>
-      <li><strong>Internacional:</strong> Conta bancária + Cartão + Documentos</li>
-      <li><strong>Empreendedor:</strong> Identidade digital + Mentoria + Tráfego pago</li>
+      <li><strong>Conta bancária brasileira com Pix</strong> – Para transações no Brasil com praticidade.</li>
+      <li><strong>Conta bancária europeia</strong> – Para negócios e acesso internacional.</li>
+      <li><strong>CPF e RG brasileiros</strong> – Ideal para marketing digital ou estudo no Brasil.</li>
+      <li><strong>Números virtuais</strong> – Brasil e Portugal para validações em plataformas.</li>
+      <li><strong>Cartões Visa/MasterCard virtuais</strong> – Para pagamentos internacionais sem burocracia.</li>
+      <li><strong>E-mails profissionais</strong> – Gmail corporativo personalizado.</li>
+      <li><strong>Tráfego pago</strong> – Impulsione seu negócio com anúncios eficientes.</li>
+      <li><strong>Mentoria digital personalizada</strong> – Orientação estratégica para sua jornada online.</li>
+      <li><strong>Compra e venda de R$ e USDT</strong> – Câmbio com segurança e rapidez.</li>
     </ul>
-  </section>
 
-  <section id="contato">
-    <h2>Contato</h2>
-    <p>Fale com Talaio via WhatsApp:</p>
-    <a class="btn" href="https://wa.me/244938402998" target="_blank">+244 938 402 998</a><br>
-    <a class="btn" href="https://wa.me/556396321596" target="_blank">+55 63 9632-1596</a>
-  </section>
+    <h2>Por que escolher a SwiftAccess Talaio?</h2>
+    <ul>
+      <li>Atendimento humanizado e profissional</li>
+      <li>Suporte completo: antes, durante e depois</li>
+      <li>Disponível online ou presencial em N’dalatando – Angola</li>
+    </ul>
 
-  <footer>
-    <p>&copy; 2025 SwiftAccess Talaio. Todos os direitos reservados.</p>
-  </footer>
-
+    <h2>Fale com a gente</h2>
+    <p><strong>WhatsApp:</strong> +244 938 402 998 / 63 9632 1596</p>
+    <p><strong>Telefone:</strong> 933 700 823</p>
+  </div>
   <script>
-    lucide.createIcons();
+    function toggleTheme() {
+      const currentTheme = document.body.getAttribute("data-theme");
+      const newTheme = currentTheme === "light" ? "dark" : "light";
+      document.body.setAttribute("data-theme", newTheme);
+    }
   </script>
 </body>
 </html>
