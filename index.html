@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SwiftAccess Talaio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; }
+    header { background: #1a1a1a; color: #fff; text-align: center; }
+    nav a { color: #fff; margin: 0 1rem; text-decoration: none; font-weight: 600; }
+    header img { width: 100%; max-height: 300px; object-fit: cover; display: block; }
+    section { padding: 2rem; max-width: 1000px; margin: auto; }
+    h2 { color: #1a1a1a; }
+    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .service-box { background: #fff; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .service-box svg { width: 32px; height: 32px; margin-bottom: 0.5rem; color: #0066cc; }
+    footer { text-align: center; background: #1a1a1a; color: #fff; padding: 1rem; margin-top: 2rem; }
+    .btn { display: inline-block; padding: 0.75rem 1.5rem; background: #0066cc; color: #fff; border-radius: 5px; text-decoration: none; margin-top: 1rem; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://images.unsplash.com/photo-1581090700227-1e8a52f6fbd4?auto=format&fit=crop&w=1350&q=80" alt="Imagem de capa">
+    <h1>SwiftAccess Talaio</h1>
+    <p>Soluções digitais e financeiras para Angola e o mundo</p>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#planos">Planos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>Somos especialistas em conectar clientes de Angola com soluções digitais e bancárias internacionais. Atendemos com agilidade, segurança e suporte personalizado. Serviços disponíveis online e presencialmente.</p>
+  </section>
+
+  <section id="servicos">
+    <h2>Serviços</h2>
+    <div class="services">
+      <div class="service-box">
+        <i data-lucide="file-text"></i>
+        <h3>Documentação</h3>
+        <p>CPF, RG, NIF, NISS, e suporte em imigração.</p>
+      </div>
+      <div class="service-box">
+        <i data-lucide="banknote"></i>
+        <h3>Contas Internacionais</h3>
+        <p>Abertura de contas no Brasil, Portugal, EUA e mais.</p>
+      </div>
+      <div class="service-box">
+        <i data-lucide="wallet"></i>
+        <h3>Carteiras Digitais</h3>
+        <p>Criação e ativação de contas Wise, Payoneer, e cartões.</p>
+      </div>
+      <div class="service-box">
+        <i data-lucide="phone"></i>
+        <h3>Números Virtuais</h3>
+        <p>Ativação de WhatsApp, Telegram e apps com números do Brasil, EUA, Portugal e mais.</p>
+      </div>
+      <div class="service-box">
+        <i data-lucide="graduation-cap"></i>
+        <h3>Mentorias</h3>
+        <p>Aulas e consultoria sobre finanças, criptomoedas e marketing.</p>
+      </div>
+      <div class="service-box">
+        <i data-lucide="dollar-sign"></i>
+        <h3>Venda de Divisas</h3>
+        <p>Compra e venda de Reais (R$) e USDT em Angola.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="planos">
+    <h2>Pacotes e Planos</h2>
+    <ul>
+      <li><strong>Start Digital:</strong> Número virtual + CPF + e-mail profissional</li>
+      <li><strong>Internacional:</strong> Conta bancária + Cartão + Documentos</li>
+      <li><strong>Empreendedor:</strong> Identidade digital + Mentoria + Tráfego pago</li>
+    </ul>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Fale com Talaio via WhatsApp:</p>
+    <a class="btn" href="https://wa.me/244938402998" target="_blank">+244 938 402 998</a><br>
+    <a class="btn" href="https://wa.me/556396321596" target="_blank">+55 63 9632-1596</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SwiftAccess Talaio. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
